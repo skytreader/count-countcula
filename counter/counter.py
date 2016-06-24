@@ -4,4 +4,7 @@ class Counter(object):
         self.counter = 0
 
     def incr(self):
-        self.countr += 1
+        self.counter += 1
+
+    def reset(self):
+        self.counter = 0
