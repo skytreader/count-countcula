@@ -1,7 +1,9 @@
 from counter import Counter
 from kivy.app import App
 from kivy.core.window import Window
+from kivy.factory import Factory
 from kivy.properties import ObjectProperty
+from kivy.uix.label import Label
 from kivy.uix.widget import Widget
 
 
@@ -13,6 +15,7 @@ class CounterWidget(Widget):
     
     def __init__(self, **kwargs):
         super(CounterWidget, self).__init__(**kwargs)
+        KickCountLabel()
         self._keyboard = Window.request_keyboard(self._keyboard_closed, self)
         self._keyboard.bind(on_key_down=self._keydown_handler)
         self.red_counter = Counter()
@@ -32,11 +35,18 @@ class CounterWidget(Widget):
 
         return True
 
+class KickCountLabel(Label):
+    """
+    See http://robertour.com/2015/07/15/kivy-label-or-widget-with-background-color-property/
+    """
+    pass
+
 class CounterApp(App):
     
     def build(self):
         return CounterWidget()
 
+Factory.register("KickCountLabel", module="KickCountLabel")
 
 if __name__ == "__main__":
     CounterApp().run()
