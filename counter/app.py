@@ -20,6 +20,9 @@ class CounterWidget(Widget):
         self.red_counter = Counter()
         self.blue_counter = Counter()
 
+        self.red_count.text = str(self.red_counter.counter)
+        self.blue_count.text = str(self.blue_counter.counter)
+
     def _keyboard_closed(self):
         self._keyboard.unbind(on_key_down=self._keydown_handler)
         self._keyboard = None
