@@ -1,7 +1,8 @@
 #:kivy 1.0.9
 
 <CounterWidget>:
-    red_count: red_count
+    # Says: red_count in Widget code is the one with _red_count id
+    red_count: _red_count
     blue_count: blue_count
 
     Label:
@@ -17,7 +18,7 @@
         center_x: root.width / 4
         top: root.top - 50
         text: "0"
-        id: red_count
+        id: _red_count
 
 <KickCountLabel>:
     canvas.before:
