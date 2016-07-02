@@ -1,13 +1,16 @@
 from counter import Counter
 from kivy.app import App
+from kivy.config import Config
+
+Config.set("graphics", "width", "600")
+Config.set("graphics", "height", "200")
+
 from kivy.core.window import Window
 from kivy.factory import Factory
 from kivy.properties import ListProperty, ObjectProperty
 from kivy.uix.label import Label
 from kivy.uix.widget import Widget
 
-
-Window.size = (600, 200)
 
 class CounterWidget(Widget):
     red_count = ObjectProperty(None)
