@@ -5,19 +5,24 @@
     red_count: _red_count
     blue_count: blue_count
 
-    KickCountLabel:
-        bgcolor: [0, 0, 1, 1]
-        font_size: 70
-        center_x: root.width * 3 / 4
+    BoxLayout:
+        orientation: "horizontal"
         top: root.top - 50
-        id: blue_count
+        spacing: 30
 
-    KickCountLabel:
-        bgcolor: [1, 0, 0, 1]
-        font_size: 70
-        center_x: root.width / 4
-        top: root.top - 50
-        id: _red_count
+        KickCountLabel:
+            bgcolor: [0, 0, 1, 1]
+            font_size: 70
+            #center_x: root.width * 3 / 4
+            #top: root.top - 50
+            id: blue_count
+
+        KickCountLabel:
+            bgcolor: [1, 0, 0, 1]
+            font_size: 70
+            #center_x: root.width / 4
+            #top: root.top - 50
+            id: _red_count
 
 <KickCountLabel>:
     canvas.before:
