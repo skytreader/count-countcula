@@ -15,7 +15,6 @@ class CounterWidget(Widget):
     
     def __init__(self, **kwargs):
         super(CounterWidget, self).__init__(**kwargs)
-        KickCountLabel()
         self._keyboard = Window.request_keyboard(self._keyboard_closed, self)
         self._keyboard.bind(on_key_down=self._keydown_handler)
         self.red_counter = Counter()
