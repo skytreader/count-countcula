@@ -2,7 +2,7 @@ from counter import Counter
 from kivy.app import App
 from kivy.core.window import Window
 from kivy.factory import Factory
-from kivy.properties import ObjectProperty
+from kivy.properties import ListProperty, ObjectProperty
 from kivy.uix.label import Label
 from kivy.uix.widget import Widget
 
@@ -39,7 +39,7 @@ class KickCountLabel(Label):
     """
     See http://robertour.com/2015/07/15/kivy-label-or-widget-with-background-color-property/
     """
-    pass
+    bgcolor = ListProperty([1, 1, 1, 1])
 
 class CounterApp(App):
     

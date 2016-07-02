@@ -18,9 +18,15 @@
         id: blue_count
 
     KickCountLabel:
-        canvas.before:
-            Color:
-                rgb: 1, 0, 0
-            Rectangle:
-                pos: self.pos
-                size: self.size
+        bgcolor: [1, 0, 0, 1]
+        font_size: 35
+        text: "8"
+
+<KickCountLabel>:
+    canvas.before:
+        Color:
+            rgba: self.bgcolor
+        Rectangle:
+            # position seems to be (x, y) on the first quadrant?
+            pos: [root.top - 50, root.top - 100]
+            size: self.size
