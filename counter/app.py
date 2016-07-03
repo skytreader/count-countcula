@@ -22,13 +22,16 @@ class CounterWidget(Widget):
         self._keyboard.bind(on_key_down=self._keydown_handler)
         self.red_counter = Counter()
         self.blue_counter = Counter()
-
-        self.red_count.text = str(self.red_counter.counter)
-        self.blue_count.text = str(self.blue_counter.counter)
+        self.__sync()
 
     def reset(self):
         self.red_counter.reset()
         self.blue_counter.reset()
+        self.__sync()
+
+    def __sync(self):
+        self.red_count.text = str(self.red_counter.counter)
+        self.blue_count.text = str(self.blue_counter.counter)
 
     def _keyboard_closed(self):
         self._keyboard.unbind(on_key_down=self._keydown_handler)
