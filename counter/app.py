@@ -3,7 +3,7 @@ from kivy.app import App
 from kivy.config import Config
 
 Config.set("graphics", "width", "600")
-Config.set("graphics", "height", "200")
+Config.set("graphics", "height", "300")
 
 from kivy.core.window import Window
 from kivy.factory import Factory

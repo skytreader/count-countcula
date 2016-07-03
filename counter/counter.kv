@@ -9,6 +9,8 @@
         rows: 2
         top: root.top - 50
         center_x: root.width / 2
+        row_force_default: True
+        row_default_height: 100
 
         GridLayout:
             cols: 2
@@ -19,6 +21,8 @@
                 #center_x: root.width / 4
                 #top: root.top - 50
                 id: _red_count
+                size_hint_x: None
+                width: 150
 
             KickCountLabel:
                 bgcolor: [0, 0, 1, 1]
@@ -26,6 +30,8 @@
                 #center_x: root.width * 3 / 4
                 #top: root.top - 50
                 id: blue_count
+                size_hint_x: None
+                width: 150
         
         Button:
             text: "Reset"
