@@ -38,10 +38,10 @@ class CounterWidget(Widget):
         self._keyboard = None
 
     def _keydown_handler(self, keyboard, keycode, text, modifiers):
-        if keycode[1] == 'k':
+        if keycode[1] == 'j':
             self.blue_counter.incr()
             self.blue_count.text = str(self.blue_counter.counter)
-        elif keycode[1] == 'j':
+        elif keycode[1] == 'k':
             self.red_counter.incr()
             self.red_count.text = str(self.red_counter.counter)
 
